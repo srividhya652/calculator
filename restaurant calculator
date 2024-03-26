@@ -1,0 +1,14 @@
+def calculate_tip(bill_amount, service_quality, num_people):
+    tip_per_person = (bill_amount * (service_quality / 100)) / num_people
+    return tip_per_person
+
+def main():
+    bill_amount = float(input("Enter the total bill amount: "))
+    service_quality = int(input("Enter the level of satisfaction (1-5): "))
+    num_people = int(input("Enter the number of people splitting the bill: "))
+
+    tip_per_person = calculate_tip(bill_amount, service_quality, num_people)
+    print("Tip per person: {:.2f}".format(tip_per_person))
+
+if _name_ == "_main_":
+    main()
